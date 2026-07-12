@@ -307,6 +307,110 @@ Electrical characterization of OEM TDC connector pinout and power supply require
 
 ---
 
+### Session EPP-002: OEM Reference Documentation Collection
+
+**Date:** 2026-07-12  
+**Time:** 08:38 - 08:40 (UTC-04:00)  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Phase:** Engineering Discovery
+
+#### Objective
+
+Capture and preserve all existing John Deere documentation that will inform the reverse engineering effort for the John Deere 316 Time Delay Controller.
+
+#### Activities
+
+- Created `research/OEM_Documentation/` directory structure
+- Imported OEM reference documents from personal collection
+- Created comprehensive documentation catalog in `research/OEM_Documentation/README.md`
+- Cataloged each document with source, format, and metadata
+- Identified document limitations and cross-references
+
+#### Observations
+
+**Documentation Collected:**
+- 1 comprehensive service manual (21.7 MB PDF)
+- 2 electrical schematics (TM1590 and PTO)
+- 1 engine-specific service information document
+- Total: 4 documents, ~22.2 MB
+
+**Documentation Quality:**
+- Service manual appears comprehensive
+- TM1590 designation indicates official John Deere technical manual
+- Some documents lack revision/date information
+- All documents from personal collection (provenance documented)
+
+**Engineering Value:**
+- Service manual provides system integration context
+- TM1590 schematics are primary electrical reference
+- PTO schematic may contain TDC-related circuitry
+- Onan P218G documentation provides engine context
+
+#### Data Collected
+
+**OEM Reference Documents:**
+- `-johndeereonan316318420servicemanual-.pdf` (21,666,009 bytes)
+- `318 Tm1590 schematics.pdf` (421,684 bytes)
+- `PTO schematic for 318.JPG` (50,730 bytes)
+- `Onan P218G ignition tests.jpg` (106,112 bytes)
+
+**Documentation:**
+- `research/OEM_Documentation/README.md` - Documentation catalog
+
+#### Decisions Made
+
+No new engineering decisions in this session.
+
+#### Methodology Observations
+
+**Documentation as Evidence:**
+- OEM documentation represents authoritative design intent
+- Document provenance recorded for traceability
+- Limitations and unknowns explicitly identified
+- Catalog structure supports future document additions
+
+#### Open Questions
+
+**Document Review Required:**
+- What TDC-specific information is in the service manual?
+- Does TM1590 contain TDC circuit details?
+- What connector pinout information is available?
+- Are there TDC specifications or operational parameters documented?
+
+**Missing Documentation:**
+- Connector pinout diagrams (may be in TM1590)
+- Parts catalog excerpts
+- TDC-specific service bulletins
+- Revision-specific documentation
+
+#### Follow-Up Required
+
+- [ ] Review service manual for TDC sections
+- [ ] Review TM1590 schematics for TDC circuit details
+- [ ] Extract connector pinout information
+- [ ] Identify TDC specifications and parameters
+- [ ] Cross-reference documentation with hardware observations
+- [ ] Document any discrepancies between OEM docs and hardware
+
+#### Engineering Confidence
+
+**Documentation Completeness:** ★★★★☆
+
+- Good collection of primary reference materials
+- Official John Deere service manual and schematics
+- Some revision/date information missing
+- May require additional documents as reverse engineering progresses
+
+#### Next Engineering Objective
+
+Review OEM documentation to extract TDC-specific information, connector pinouts, and operational specifications.
+
+#### EPP Reference
+
+EPP-002: OEM Reference Documentation
+
+---
+
 ## Future Sessions
 
 *Subsequent engineering sessions will be documented below in chronological order.*
@@ -324,5 +428,5 @@ Electrical characterization of OEM TDC connector pinout and power supply require
 ---
 
 **Notebook Established:** July 12, 2026  
-**Current Session:** ES-001  
+**Current Session:** EPP-002  
 **Status:** Active

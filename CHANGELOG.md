@@ -31,8 +31,48 @@ This project uses **phase-based versioning** rather than semantic versioning:
 
 ### Planned
 - Test equipment inventory documentation
+- Review OEM documentation for TDC-specific information
+- Extract connector pinout from schematics
 - Electrical characterization of OEM TDC connector pinout
-- Power supply voltage identification
+
+---
+
+## [Discovery.EPP-002.0] - 2026-07-12
+
+### Added
+
+**OEM Reference Documentation:**
+- `research/OEM_Documentation/` directory structure
+- `research/OEM_Documentation/README.md` - Comprehensive documentation catalog
+
+**Service Manuals:**
+- `-johndeereonan316318420servicemanual-.pdf` (21.7 MB) - John Deere Onan 316/318/420 service manual
+
+**Electrical Schematics:**
+- `318 Tm1590 schematics.pdf` (422 KB) - Official John Deere TM1590 technical manual schematics
+- `PTO schematic for 318.JPG` (51 KB) - PTO electrical schematic
+
+**TDC-Related Service Information:**
+- `Onan P218G ignition tests.jpg` (106 KB) - Onan P218G engine ignition test procedures
+
+**Engineering Sessions:**
+- Session EPP-002: OEM Reference Documentation Collection
+
+### Changed
+
+- `ENGINEERING_NOTEBOOK.md` - Added Session EPP-002, updated current session
+
+### Deprecated
+- N/A
+
+### Removed
+- N/A
+
+### Fixed
+- N/A
+
+### Security
+- N/A
 
 ---
 
@@ -180,6 +220,7 @@ This project uses **phase-based versioning** rather than semantic versioning:
 | Discovery.001.0 | 2026-07-12 | Engineering Discovery | Repository initialization and foundation |
 | Discovery.EPP-000.0 | 2026-07-12 | Engineering Discovery | NorthStar Engineering Workflow adoption |
 | Discovery.ES-001.0 | 2026-07-12 | Engineering Discovery | OEM TDC baseline documentation |
+| Discovery.EPP-002.0 | 2026-07-12 | Engineering Discovery | OEM reference documentation collection |
 
 ---
 
@@ -195,5 +236,5 @@ This project uses **phase-based versioning** rather than semantic versioning:
 ---
 
 **Changelog Established:** July 12, 2026  
-**Current Version:** Discovery.ES-001.0  
+**Current Version:** Discovery.EPP-002.0  
 **Status:** Active
