@@ -128,6 +128,78 @@ Devin Prompt 001 - Repository Foundation
 
 ---
 
+### Session EPP-000: NorthStar Engineering Workflow Adoption
+
+**Date:** 2026-07-12  
+**Time:** 08:01 - 08:09 (UTC-04:00)  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Phase:** Engineering Discovery
+
+#### Objective
+
+Adopt the NorthStar Engineering Workflow and establish the engineering team structure to support long-term openTDC project operations.
+
+#### Activities
+
+- Defined NorthStar Engineering Workflow
+- Established engineering team roles and responsibilities
+- Onboarded Devin as Engineering Configuration Manager
+- Onboarded Grace as Engineering Research & Systems Partner
+- Defined standard engineering session workflow
+- Established Repository Health Assessment protocol
+- Documented Engineering Project Prompt (EPP) format and usage
+- Formalized Git commit and push approval process
+
+#### Observations
+
+- Clear separation of roles (Engineering, Research, Configuration Management) enables efficient workflow
+- EPP-based handoffs provide complete context for repository synchronization
+- Repository Health Assessments enable continuous improvement without blocking progress
+- Explicit approval for Git operations maintains engineering control
+- Engineering authority remains clearly with Lead Systems Engineer
+
+#### Data Collected
+
+- NorthStar Engineering Workflow documentation
+- Team role definitions
+- Engineering decision records (ED-005, ED-006, ED-007)
+
+#### Decisions Made
+
+- **ED-005:** Engineering authority remains with Lead Systems Engineer; AI tools support but do not make decisions - See ENGINEERING_DECISIONS.md #005
+- **ED-006:** Git commits and pushes require explicit approval - See ENGINEERING_DECISIONS.md #006
+- **ED-007:** Repository Health Assessments are advisory only - See ENGINEERING_DECISIONS.md #007
+
+#### Open Questions
+
+- None (workflow establishment session)
+
+#### Follow-Up Required
+
+- [x] Document NorthStar Engineering Workflow in repository
+- [x] Update README with team structure
+- [x] Establish Repository Health Assessment protocol
+- [ ] Begin Engineering Session ES-001: TDC characterization
+
+#### Next Engineering Objective
+
+**Engineering Session ES-001**
+
+Objective: Characterize the OEM John Deere 316 Time Delay Controller input logic and document existing system behavior through evidence-based testing.
+
+Initial focus:
+- Battery verification
+- Charging system verification
+- Neutral switch characterization
+- Safety interlock validation
+- Initial TDC signal mapping
+
+#### EPP Reference
+
+EPP-000: NorthStar Engineering Workflow Adoption & Repository Operational
+
+---
+
 ## Future Sessions
 
 *Subsequent engineering sessions will be documented below in chronological order.*
@@ -145,5 +217,5 @@ Devin Prompt 001 - Repository Foundation
 ---
 
 **Notebook Established:** July 12, 2026  
-**Current Session:** 001  
+**Current Session:** EPP-000  
 **Status:** Active

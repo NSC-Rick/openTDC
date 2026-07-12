@@ -32,7 +32,51 @@ This project uses **phase-based versioning** rather than semantic versioning:
 ### Planned
 - Test equipment inventory documentation
 - Hardware sample documentation
-- First TDC characterization session
+- Engineering Session ES-001: TDC characterization
+
+---
+
+## [Discovery.EPP-000.0] - 2026-07-12
+
+### Added
+
+**NorthStar Engineering Workflow:**
+- Formal engineering team structure with defined roles
+- Lead Systems Engineer: Rick Daniell
+- Engineering Research & Systems Partner: Grace
+- Engineering Configuration Manager: Devin
+- Standard engineering workflow from bench to repository
+- Repository Health Assessment protocol
+
+**Engineering Decisions:**
+- Decision 005: Engineering Authority and AI Role Boundaries
+- Decision 006: Git Commit and Push Approval Required
+- Decision 007: Repository Health Assessment Advisory Status
+
+**Engineering Sessions:**
+- Session EPP-000: NorthStar Engineering Workflow Adoption
+
+**Methodology Observations:**
+- Observation 004: NorthStar Engineering Workflow Scalability
+
+### Changed
+
+- `README.md` - Added Engineering Team section and NorthStar Engineering Workflow
+- `ENGINEERING_NOTEBOOK.md` - Added Session EPP-000, updated current session
+- `ENGINEERING_DECISIONS.md` - Added ED-005, ED-006, ED-007, updated decision count to 7
+- `METHODOLOGY_OBSERVATIONS.md` - Added Observation 004, updated observation count to 4
+
+### Deprecated
+- N/A
+
+### Removed
+- N/A
+
+### Fixed
+- N/A
+
+### Security
+- N/A
 
 ---
 
@@ -91,6 +135,7 @@ This project uses **phase-based versioning** rather than semantic versioning:
 | Version | Date | Phase | Description |
 |---------|------|-------|-------------|
 | Discovery.001.0 | 2026-07-12 | Engineering Discovery | Repository initialization and foundation |
+| Discovery.EPP-000.0 | 2026-07-12 | Engineering Discovery | NorthStar Engineering Workflow adoption |
 
 ---
 
@@ -106,5 +151,5 @@ This project uses **phase-based versioning** rather than semantic versioning:
 ---
 
 **Changelog Established:** July 12, 2026  
-**Current Version:** Discovery.001.0  
+**Current Version:** Discovery.EPP-000.0  
 **Status:** Active

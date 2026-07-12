@@ -304,6 +304,112 @@ The key is appropriate division of responsibility:
 
 ---
 
+### Observation 004: NorthStar Engineering Workflow Scalability
+
+**Date:** 2026-07-12  
+**Session:** EPP-000  
+**Category:** Process  
+**Impact:** High
+
+#### Context
+
+The NorthStar Engineering Workflow was formally adopted for the openTDC project, establishing clear roles (Lead Systems Engineer, Engineering Research Partner, Engineering Configuration Manager) and a standardized workflow from bench work through repository synchronization to Git operations.
+
+#### Observation
+
+Establishing the engineering workflow before beginning technical work on the TDC hardware significantly reduces administrative friction while improving long-term engineering traceability.
+
+The separation of concerns provides clear benefits:
+
+**Engineering (Rick):**
+- Focused on bench work, measurements, and validation
+- Makes engineering decisions without administrative burden
+- Maintains final authority and accountability
+
+**Engineering Research (Grace):**
+- Provides technical analysis and recommendations
+- Supports reverse engineering and architecture
+- Generates EPPs for repository handoff
+- Does not directly modify repository
+
+**Configuration Management (Devin):**
+- Synchronizes repository based on EPPs
+- Maintains documentation consistency
+- Manages Git operations with approval
+- Monitors repository health
+- Does not make engineering decisions
+
+This separation enables:
+- Engineers to focus on engineering, not file management
+- Clear accountability for decisions
+- Efficient repository maintenance
+- Scalable workflow for future projects
+
+#### Analysis
+
+Traditional approaches often conflate these roles:
+- Engineers spend time on documentation formatting
+- Documentation lags behind engineering work
+- Repository organization degrades over time
+- Decision rationale is lost
+- Administrative overhead slows engineering
+
+The NorthStar workflow addresses these issues by:
+- Explicit role separation with clear boundaries
+- EPP-based handoffs with complete context
+- Configuration management as a dedicated function
+- Repository health monitoring without blocking progress
+- Approval gates for critical operations (commits, pushes)
+
+The workflow is particularly effective because:
+- EPPs capture complete session context
+- AI tools handle administrative tasks within defined boundaries
+- Engineering authority remains clear and unambiguous
+- Documentation is maintained as part of the workflow, not as an afterthought
+- Repository quality is monitored continuously
+
+#### Recommendation
+
+**Adopt NorthStar Engineering Workflow as template for future NorthStar Engineering projects.**
+
+Key principles to preserve:
+1. **Clear role separation** - Engineering, Research, Configuration Management
+2. **EPP-based handoffs** - Complete context in single artifact
+3. **Approval gates** - Commits and pushes require engineering approval
+4. **Advisory health monitoring** - Continuous improvement without blocking progress
+5. **Engineering authority** - Final decisions rest with human engineer
+
+**For this project:**
+- Maintain workflow discipline throughout project lifecycle
+- Document workflow effectiveness and refinements
+- Observe opportunities for improvement
+- Recommend workflow enhancements based on experience
+
+**For future projects:**
+- Use openTDC as reference implementation
+- Adapt workflow to project-specific needs
+- Preserve core principles while allowing flexibility
+- Build on lessons learned
+
+#### Action Taken
+
+- NorthStar Engineering Workflow formally adopted (EPP-000)
+- Engineering Decisions ED-005, ED-006, ED-007 document workflow elements
+- Team roles documented in repository
+- Standard workflow diagram established
+- Repository Health Assessment protocol activated
+
+#### Related Items
+
+- Decision 005: Engineering Authority and AI Role Boundaries
+- Decision 006: Git Commit and Push Approval Required
+- Decision 007: Repository Health Assessment Advisory Status
+- Session EPP-000: NorthStar Engineering Workflow Adoption
+- Observation 001: Engineering-First Repository Structure
+- Observation 002: Session-Based Workflow with EPP Handoffs
+
+---
+
 ## Future Observations
 
 *Subsequent methodology observations will be documented below in chronological order.*
@@ -345,9 +451,10 @@ Successful observations should be:
 | 001 | Establish structure before technical work | Adopted | 2026-07-12 |
 | 002 | Use session-based workflow with EPPs | Adopted | 2026-07-12 |
 | 003 | AI assistance with engineer oversight | Adopted | 2026-07-12 |
+| 004 | NorthStar Engineering Workflow for future projects | Adopted | 2026-07-12 |
 
 ---
 
 **Methodology Observations Established:** July 12, 2026  
-**Current Observations:** 3  
+**Current Observations:** 4  
 **Status:** Active

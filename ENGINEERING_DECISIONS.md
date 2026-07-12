@@ -386,6 +386,250 @@ Final engineering decisions and responsibility rest with human engineers.
 
 ---
 
+### Decision 005: Engineering Authority and AI Role Boundaries
+
+**Date:** 2026-07-12  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Session:** EPP-000  
+**Status:** Accepted  
+**Phase:** Engineering Discovery
+
+#### Context
+
+With the adoption of the NorthStar Engineering Workflow and the onboarding of AI tools (Devin as Engineering Configuration Manager, Grace as Engineering Research Partner), clear boundaries needed to be established regarding engineering authority and decision-making responsibility.
+
+#### Decision
+
+**Engineering authority remains with the Lead Systems Engineer.**
+
+All engineering decisions require approval from Rick Daniell. AI tools (Devin, Grace) support engineering work but do not make engineering decisions.
+
+Specific boundaries:
+- **Rick Daniell:** Final approval on all engineering changes, measurements, validation, and technical decisions
+- **Grace:** Provides engineering recommendations, research, and analysis but does not directly modify repository
+- **Devin:** Synchronizes repository based on approved EPPs but does not make engineering decisions
+
+#### Rationale
+
+- Engineering accountability requires human responsibility
+- Professional engineering standards require identifiable decision-makers
+- AI tools lack physical context and real-world validation capability
+- Clear authority prevents ambiguity and ensures quality
+- Separation of roles enables efficient workflow while maintaining rigor
+
+#### Alternatives Considered
+
+- **Distributed Authority:** Allow AI tools to make certain classes of decisions autonomously  
+  *Why not chosen:* Unacceptable risk; violates professional engineering standards; no accountability mechanism
+
+- **Consensus-Based:** Require agreement between Rick, Grace, and Devin  
+  *Why not chosen:* Inefficient; AI cannot truly evaluate engineering trade-offs; slows decision-making
+
+#### Evidence
+
+- Professional engineering ethics and standards
+- Lessons from Decision 004 (AI Role and Oversight)
+- Need for clear accountability in engineering work
+- Industry best practices for engineering team structure
+
+#### Consequences
+
+- **Positive:**
+  - Clear accountability and responsibility
+  - Efficient decision-making process
+  - Maintains professional engineering standards
+  - Enables productive AI collaboration within appropriate boundaries
+
+- **Negative:**
+  - All decisions require Rick's approval (potential bottleneck)
+  - AI tools cannot work fully autonomously
+  - May feel slower than unrestricted AI operation
+
+- **Risks:**
+  - Rick becomes single point of failure if unavailable
+  - Team members may seek workarounds to approval process
+  - Boundary between recommendation and decision may blur over time
+
+#### Related Decisions
+
+- Decision 004: AI Role and Oversight
+- Decision 006: Git Commit and Push Approval
+- Decision 007: Repository Health Assessment Advisory Status
+
+#### References
+
+- NorthStar Engineering Workflow (EPP-000)
+- ENGINEERING_PRINCIPLES.md (Principle 6)
+
+---
+
+### Decision 006: Git Commit and Push Approval Required
+
+**Date:** 2026-07-12  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Session:** EPP-000  
+**Status:** Accepted  
+**Phase:** Engineering Discovery
+
+#### Context
+
+As part of the NorthStar Engineering Workflow, Devin (Engineering Configuration Manager) is responsible for Git operations. Clear protocol needed to be established for when commits and pushes can be executed.
+
+#### Decision
+
+**Git commits and GitHub pushes require explicit approval from the Lead Systems Engineer.**
+
+Workflow:
+1. Devin synchronizes repository based on EPP
+2. Devin presents summary of changes
+3. Devin asks: "Would you like me to create a Git commit?"
+4. Upon approval, Devin creates commit with professional engineering message
+5. Devin asks: "Would you like me to push these changes to GitHub?"
+6. Upon approval, Devin executes push
+
+**Never commit without approval.**  
+**Never push without approval.**
+
+#### Rationale
+
+- Repository represents official engineering record
+- Commits should reflect reviewed and validated work
+- Prevents accidental or premature publication of work
+- Maintains engineering control over repository state
+- Allows review before making changes permanent
+- Supports careful, deliberate engineering practice
+
+#### Alternatives Considered
+
+- **Auto-commit after EPP:** Automatically commit all EPP-based changes  
+  *Why not chosen:* Removes review opportunity; may commit errors; reduces control
+
+- **Devin decides when to commit:** Allow Devin to judge appropriate commit timing  
+  *Why not chosen:* Violates engineering authority principle; AI cannot evaluate readiness
+
+- **Separate commit and push approval:** Require approval only for push, not commit  
+  *Why not chosen:* Commits should also be deliberate; local commits still affect repository history
+
+#### Evidence
+
+- Git best practices for professional repositories
+- Engineering configuration management standards
+- Need for review before publication
+- Experience from Session 001 Git operations
+
+#### Consequences
+
+- **Positive:**
+  - Maintains control over repository state
+  - Enables review before commitment
+  - Prevents accidental publication
+  - Supports deliberate engineering practice
+  - Clear workflow for Git operations
+
+- **Negative:**
+  - Requires explicit approval for each commit/push
+  - Adds steps to workflow
+  - Cannot operate fully asynchronously
+
+- **Risks:**
+  - Approval requests may become pro forma rather than meaningful review
+  - May slow down rapid iteration if needed
+  - Requires Rick's availability for repository updates
+
+#### Related Decisions
+
+- Decision 005: Engineering Authority and AI Role Boundaries
+- Decision 004: Session-Based Workflow with EPP Handoffs
+
+#### References
+
+- NorthStar Engineering Workflow (EPP-000)
+- Git workflow documentation
+
+---
+
+### Decision 007: Repository Health Assessment Advisory Status
+
+**Date:** 2026-07-12  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Session:** EPP-000  
+**Status:** Accepted  
+**Phase:** Engineering Discovery
+
+#### Context
+
+Repository Health Assessments were added to the workflow to identify opportunities for improving traceability, organization, and documentation quality. The relationship between health assessments and engineering session completion needed to be defined.
+
+#### Decision
+
+**Repository Health Assessments are advisory only and shall never delay completion of an engineering session.**
+
+Protocol:
+- Health assessments are performed at session completion
+- Recommendations are presented separately from engineering decisions
+- Recommendations are categorized by priority (Critical/Important/Enhancement)
+- No repository improvements are implemented without approval
+- Health assessments do not block session closure or Git operations
+- Recommendations may be addressed immediately, deferred, or declined
+
+#### Rationale
+
+- Engineering progress should not be blocked by administrative improvements
+- Health assessments add value but are not critical path
+- Allows accumulation of improvements for batch processing
+- Maintains focus on engineering objectives
+- Prevents "perfect is the enemy of good" syndrome
+- Enables continuous improvement without workflow disruption
+
+#### Alternatives Considered
+
+- **Mandatory Health Fixes:** Require resolution of health issues before session completion  
+  *Why not chosen:* Would delay engineering work; not all issues are critical; reduces flexibility
+
+- **No Health Assessments:** Skip health monitoring entirely  
+  *Why not chosen:* Misses opportunity for continuous improvement; repository quality may degrade over time
+
+- **Automated Health Fixes:** Allow Devin to implement low-risk improvements automatically  
+  *Why not chosen:* Violates approval principle; "low-risk" is subjective; may introduce unintended changes
+
+#### Evidence
+
+- Software engineering best practices for technical debt management
+- Experience with documentation overhead in engineering projects
+- Need to balance quality with progress
+- Continuous improvement philosophy
+
+#### Consequences
+
+- **Positive:**
+  - Engineering sessions complete efficiently
+  - Health monitoring without workflow disruption
+  - Flexibility in addressing recommendations
+  - Continuous improvement opportunity
+  - Clear separation of critical vs. enhancement work
+
+- **Negative:**
+  - Health recommendations may accumulate if not addressed
+  - Repository quality depends on periodic attention to recommendations
+  - Requires discipline to review and act on recommendations
+
+- **Risks:**
+  - Health recommendations may be ignored indefinitely
+  - Repository quality may degrade if assessments are consistently deferred
+  - "Advisory only" may be interpreted as "optional and unimportant"
+
+#### Related Decisions
+
+- Decision 005: Engineering Authority and AI Role Boundaries
+- Decision 002: Project Phase Structure
+
+#### References
+
+- Repository Health Assessment Protocol
+- NorthStar Engineering Workflow (EPP-000)
+
+---
+
 ## Future Decisions
 
 *Subsequent engineering decisions will be documented below in chronological order.*
@@ -414,5 +658,5 @@ Reviews are documented as updates to the original decision record.
 ---
 
 **Decision Log Established:** July 12, 2026  
-**Current Decisions:** 4  
+**Current Decisions:** 7  
 **Status:** Active

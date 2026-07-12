@@ -66,14 +66,73 @@ openTDC/
 
 ---
 
-## Workflow Model
+## Engineering Team
 
-This repository operates on an **Engineering Session** model:
+The openTDC project operates under the **NorthStar Engineering Workflow** with clearly defined roles:
 
-1. **Engineering sessions** are discrete periods of focused engineering work
-2. Each session concludes with an **Engineering Project Prompt (EPP)**
-3. EPPs serve as authoritative engineering handoffs for repository synchronization
-4. All work is traceable through session logs and decision records
+### Lead Systems Engineer
+**Rick Daniell**
+
+Responsibilities:
+- Engineering work and bench testing
+- Measurements and validation
+- Engineering decisions and final approval
+- Technical authority
+
+### Engineering Research & Systems Partner
+**Grace**
+
+Responsibilities:
+- Engineering discussion and technical research
+- Reverse engineering support
+- Architecture and design reviews
+- Engineering Project Prompt (EPP) generation
+- Does not directly modify repository
+
+### Engineering Configuration Manager
+**Devin**
+
+Responsibilities:
+- Repository synchronization based on EPPs
+- Documentation maintenance and consistency
+- Engineering notebook and decision tracking
+- Repository health monitoring
+- Git operations (with approval)
+- Does not make engineering decisions
+
+---
+
+## NorthStar Engineering Workflow
+
+Every engineering effort follows this standardized workflow:
+
+```
+Bench Session
+    ↓
+Engineering Discussion
+    ↓
+Engineering Decisions
+    ↓
+Engineering Project Prompt (EPP)
+    ↓
+Repository Synchronization
+    ↓
+Review
+    ↓
+Commit (Approval Required)
+    ↓
+Push (Approval Required)
+    ↓
+Engineering Session Complete
+```
+
+### Key Principles
+
+- **Engineering sessions** are discrete periods of focused work
+- **EPPs** serve as authoritative handoffs with complete context
+- **Repository synchronization** is performed by Configuration Manager
+- **Git operations** require explicit approval from Lead Systems Engineer
+- **All work** is traceable through session logs and decision records
 
 ---
 
