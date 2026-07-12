@@ -410,6 +410,118 @@ Key principles to preserve:
 
 ---
 
+### Observation 005: Engineering Evidence Should Be Captured Before Engineering Interpretation
+
+**Date:** 2026-07-12  
+**Session:** ES-001  
+**Category:** Process  
+**Impact:** High
+
+#### Context
+
+During Engineering Session ES-001, baseline photographic documentation of the OEM TDC hardware was captured before any analysis, disassembly, or electrical characterization. This represented a deliberate separation of evidence collection from engineering interpretation.
+
+#### Observation
+
+**Capturing engineering evidence before analysis significantly improves the quality and traceability of engineering work.**
+
+Key insight:
+- **Photographs represent objective evidence**
+- **Engineering conclusions represent interpretation**
+
+Separating evidence from interpretation preserves the integrity of the engineering record and reduces the possibility of retrospective bias.
+
+When evidence is captured first:
+- Observations are made without preconceptions
+- Original state is preserved independent of analysis
+- Future engineers can re-interpret evidence with new insights
+- Mistakes in interpretation don't corrupt the evidence
+- Evidence remains available for verification
+
+When interpretation precedes evidence:
+- Selective documentation may occur (only capturing "relevant" details)
+- Original context may be lost
+- Bias may influence what is recorded
+- Errors in interpretation cannot be corrected from original evidence
+
+#### Analysis
+
+Traditional engineering approaches often conflate evidence and interpretation:
+- Notes describe what the engineer *thinks* they see, not just what is visible
+- Photographs are taken to support conclusions already drawn
+- Details deemed "unimportant" are not documented
+- Original state is modified before complete documentation
+
+This creates problems:
+- Cannot verify original observations
+- Cannot re-analyze with different assumptions
+- Cannot distinguish fact from interpretation in historical records
+- Lost information cannot be recovered
+
+The evidence-first approach addresses these issues:
+- Evidence is captured in original state
+- Interpretation happens separately and is clearly labeled as such
+- Multiple interpretations can coexist
+- Future analysis can use original evidence
+- Engineering confidence can be explicitly stated
+
+This is particularly valuable in reverse engineering where:
+- Initial understanding is incomplete
+- Assumptions may be wrong
+- Circuit function may not be obvious
+- Multiple analysis passes are common
+
+#### Recommendation
+
+**Future engineering sessions should always establish an Evidence Package before performing detailed analysis whenever practical.**
+
+Best practices:
+1. **Capture evidence first** - Document before analyzing
+2. **Separate evidence from interpretation** - Clearly distinguish objective observations from engineering conclusions
+3. **Treat evidence as first-class artifacts** - Store in repository with proper organization
+4. **Label interpretation explicitly** - Mark conclusions as engineering judgment, not fact
+5. **State confidence levels** - Indicate certainty of interpretations
+
+**Evidence should become a first-class engineering artifact within the repository.**
+
+Recommended evidence types:
+- Photographs (baseline, detail, assembly)
+- Measurements (raw data, not just processed results)
+- Oscilloscope captures
+- Logic analyzer traces
+- Test results (pass/fail with conditions)
+- Physical samples (when destructive testing occurs)
+
+**For this project:**
+- Establish Evidence Packages for each engineering session
+- Store evidence in appropriate repository locations
+- Reference evidence from engineering documentation
+- Maintain separation between evidence and interpretation
+- Use confidence ratings to indicate interpretation certainty
+
+**For future projects:**
+- Adopt evidence-first methodology as standard practice
+- Create evidence package templates
+- Establish evidence storage conventions
+- Train team members on evidence vs. interpretation distinction
+
+#### Action Taken
+
+- Evidence Package ES-001 created with baseline OEM TDC photographs
+- `hardware/OEM_TDC/photos/` established for evidence storage
+- `hardware/OEM_TDC/OEM_TDC.md` separates observations from unknowns
+- Engineering confidence rating included in documentation
+- Decision 008 formalizes photographic baseline requirement
+
+#### Related Items
+
+- Decision 008: Baseline Hardware Documentation Prior to Reverse Engineering
+- Session ES-001: OEM TDC Baseline Documentation
+- Evidence Package ES-001: OEM TDC Baseline Photographs
+- `hardware/OEM_TDC/OEM_TDC.md` - Hardware documentation with confidence rating
+
+---
+
 ## Future Observations
 
 *Subsequent methodology observations will be documented below in chronological order.*
@@ -452,9 +564,10 @@ Successful observations should be:
 | 002 | Use session-based workflow with EPPs | Adopted | 2026-07-12 |
 | 003 | AI assistance with engineer oversight | Adopted | 2026-07-12 |
 | 004 | NorthStar Engineering Workflow for future projects | Adopted | 2026-07-12 |
+| 005 | Evidence-first methodology for all sessions | Adopted | 2026-07-12 |
 
 ---
 
 **Methodology Observations Established:** July 12, 2026  
-**Current Observations:** 4  
+**Current Observations:** 5  
 **Status:** Active

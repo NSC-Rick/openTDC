@@ -630,6 +630,80 @@ Protocol:
 
 ---
 
+### Decision 008: Baseline Hardware Documentation Prior to Reverse Engineering
+
+**Date:** 2026-07-12  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Session:** ES-001  
+**Status:** Accepted  
+**Phase:** Engineering Discovery
+
+#### Context
+
+The openTDC project has acquired a spare OEM John Deere 316 Time Delay Controller for reverse engineering. A methodology was needed to ensure that the original hardware condition is preserved in the engineering record before any disassembly, testing, or modification activities begin.
+
+#### Decision
+
+**All OEM hardware shall be thoroughly documented through non-destructive photographic evidence before any disassembly, modification, electrical testing, or reverse engineering activities are performed.**
+
+This establishes an immutable baseline of the hardware in its original assembled state.
+
+#### Rationale
+
+- Photographic documentation preserves the original condition of the hardware
+- Establishes an immutable engineering baseline for future reference
+- Provides traceability throughout the reverse engineering process
+- Supports future analysis and comparison
+- Captures contextual information available only in the assembled state
+- Enables verification that observations are from original hardware, not artifacts of disassembly
+- Creates objective evidence separate from engineering interpretation
+
+#### Alternatives Considered
+
+- **Photograph only after disassembly:** Document components individually  
+  *Why not chosen:* Permanently loses contextual information about assembly, orientation, and original condition; cannot verify pre-disassembly state
+
+- **Photograph only selected components:** Focus on "important" areas  
+  *Why not chosen:* Engineering judgment about importance may be incorrect; details deemed unimportant initially may become critical later; incomplete baseline
+
+#### Evidence
+
+- Initial photographs of spare John Deere 316 OEM Time Delay Controller captured prior to any disassembly
+- Evidence Package ES-001: Three baseline photographs documenting housing, front PCB, and rear PCB
+- Photographs stored in `hardware/OEM_TDC/photos/`
+
+#### Consequences
+
+- **Positive:**
+  - Immutable record of original hardware condition
+  - Enables future comparison and verification
+  - Supports traceability and engineering rigor
+  - Provides objective evidence for analysis
+  - Prevents loss of assembly context
+  - Low cost, high value engineering practice
+
+- **Negative:**
+  - Requires time before beginning hands-on work
+  - Adds step to reverse engineering workflow
+  - Requires storage for image files
+
+- **Risks:**
+  - Photographs may not capture all relevant details (mitigated by multiple angles and high resolution)
+  - May delay start of electrical characterization (acceptable trade-off for baseline preservation)
+
+#### Related Decisions
+
+- Decision 002: Project Phase Structure (Engineering Discovery)
+- Methodology Observation 005: Engineering Evidence Should Be Captured Before Engineering Interpretation
+
+#### References
+
+- `hardware/OEM_TDC/OEM_TDC.md` - Hardware documentation
+- `hardware/OEM_TDC/photos/` - Evidence Package ES-001
+- ENGINEERING_NOTEBOOK.md - Session ES-001
+
+---
+
 ## Future Decisions
 
 *Subsequent engineering decisions will be documented below in chronological order.*
@@ -658,5 +732,5 @@ Reviews are documented as updates to the original decision record.
 ---
 
 **Decision Log Established:** July 12, 2026  
-**Current Decisions:** 7  
+**Current Decisions:** 8  
 **Status:** Active

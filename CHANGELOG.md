@@ -31,8 +31,51 @@ This project uses **phase-based versioning** rather than semantic versioning:
 
 ### Planned
 - Test equipment inventory documentation
-- Hardware sample documentation
-- Engineering Session ES-001: TDC characterization
+- Electrical characterization of OEM TDC connector pinout
+- Power supply voltage identification
+
+---
+
+## [Discovery.ES-001.0] - 2026-07-12
+
+### Added
+
+**Hardware Documentation:**
+- `hardware/OEM_TDC/` directory structure
+- `hardware/OEM_TDC/photos/` directory for evidence storage
+- `hardware/OEM_TDC/OEM_TDC.md` - OEM hardware baseline documentation
+
+**Evidence Package ES-001:**
+- `OEM Housing.jpeg` - External housing assembly photograph
+- `OEM TDC Front PCB.jpeg` - Front side PCB photograph
+- `OEM TDC Rear PCB.jpeg` - Rear side PCB photograph
+
+**Engineering Decisions:**
+- Decision 008: Baseline Hardware Documentation Prior to Reverse Engineering
+
+**Engineering Sessions:**
+- Session ES-001: OEM TDC Baseline Documentation
+
+**Methodology Observations:**
+- Observation 005: Engineering Evidence Should Be Captured Before Engineering Interpretation
+
+### Changed
+
+- `ENGINEERING_NOTEBOOK.md` - Added Session ES-001, updated current session
+- `ENGINEERING_DECISIONS.md` - Added ED-008, updated decision count to 8
+- `METHODOLOGY_OBSERVATIONS.md` - Added MO-005, updated observation count to 5
+
+### Deprecated
+- N/A
+
+### Removed
+- N/A
+
+### Fixed
+- N/A
+
+### Security
+- N/A
 
 ---
 
@@ -136,6 +179,7 @@ This project uses **phase-based versioning** rather than semantic versioning:
 |---------|------|-------|-------------|
 | Discovery.001.0 | 2026-07-12 | Engineering Discovery | Repository initialization and foundation |
 | Discovery.EPP-000.0 | 2026-07-12 | Engineering Discovery | NorthStar Engineering Workflow adoption |
+| Discovery.ES-001.0 | 2026-07-12 | Engineering Discovery | OEM TDC baseline documentation |
 
 ---
 
@@ -151,5 +195,5 @@ This project uses **phase-based versioning** rather than semantic versioning:
 ---
 
 **Changelog Established:** July 12, 2026  
-**Current Version:** Discovery.EPP-000.0  
+**Current Version:** Discovery.ES-001.0  
 **Status:** Active

@@ -200,6 +200,113 @@ EPP-000: NorthStar Engineering Workflow Adoption & Repository Operational
 
 ---
 
+### Session ES-001: OEM TDC Baseline Documentation
+
+**Date:** 2026-07-12  
+**Time:** 08:24 - 08:29 (UTC-04:00)  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Phase:** Engineering Discovery
+
+#### Objective
+
+Establish baseline photographic documentation of the OEM John Deere 316 Time Delay Controller prior to any disassembly, electrical testing, or reverse engineering activities.
+
+#### Activities
+
+- Photographed OEM TDC housing (external assembly)
+- Photographed OEM TDC front PCB (component side)
+- Photographed OEM TDC rear PCB (solder side)
+- Created `hardware/OEM_TDC/` directory structure
+- Imported photographs to `hardware/OEM_TDC/photos/`
+- Created `hardware/OEM_TDC/OEM_TDC.md` hardware documentation
+- Documented physical observations from visual inspection
+- Identified known unknowns for future investigation
+
+#### Observations
+
+**Physical Observations (Visual Only):**
+- Controller remains fully assembled
+- External housing appears intact
+- Through-hole component construction
+- Relay visible on PCB
+- Electrolytic capacitor present
+- Multiple discrete components visible
+- Connector solder joints visible
+- No obvious signs of overheating, corrosion, or component damage
+
+**Methodology Observations:**
+- Photographic evidence captured before any analysis or interpretation
+- Clear separation maintained between objective evidence and engineering conclusions
+- Engineering confidence rating included in documentation
+- Evidence Package concept successfully implemented
+
+#### Data Collected
+
+**Evidence Package ES-001:**
+- `OEM Housing.jpeg` (659,498 bytes)
+- `OEM TDC Front PCB.jpeg` (664,752 bytes)
+- `OEM TDC Rear PCB.jpeg` (765,724 bytes)
+
+**Documentation:**
+- `hardware/OEM_TDC/OEM_TDC.md` - Hardware baseline documentation
+
+#### Decisions Made
+
+- **ED-008:** Baseline Hardware Documentation Prior to Reverse Engineering - See ENGINEERING_DECISIONS.md #008
+
+Decision: All OEM hardware shall be thoroughly documented through non-destructive photographic evidence before any disassembly, modification, electrical testing, or reverse engineering activities.
+
+#### Methodology Observations
+
+- **MO-005:** Engineering Evidence Should Be Captured Before Engineering Interpretation - See METHODOLOGY_OBSERVATIONS.md #005
+
+Observation: Capturing engineering evidence before analysis significantly improves quality and traceability. Evidence and interpretation should be clearly separated.
+
+#### Open Questions
+
+**Known Unknowns Identified:**
+- Internal circuit topology
+- Relay control logic
+- Comparator usage
+- Timing implementation
+- Power supply architecture
+- Input conditioning
+- Output driver topology
+- Presence of active timing circuitry
+- Component values
+- PCB revision level
+- Functional truth table
+- Connector pin assignments
+
+#### Follow-Up Required
+
+- [ ] Electrical characterization of connector pinout
+- [ ] Power supply voltage identification
+- [ ] Input signal characterization
+- [ ] Output signal characterization
+- [ ] Relay control logic analysis
+- [ ] Component value measurement
+- [ ] Circuit topology reverse engineering
+
+#### Engineering Confidence
+
+**Documentation Confidence:** ★★★★★
+
+- Physical observations only
+- No engineering assumptions made
+- No circuit functionality inferred
+- Baseline successfully established
+
+#### Next Engineering Objective
+
+Electrical characterization of OEM TDC connector pinout and power supply requirements.
+
+#### EPP Reference
+
+*To be created upon session completion*
+
+---
+
 ## Future Sessions
 
 *Subsequent engineering sessions will be documented below in chronological order.*
@@ -217,5 +324,5 @@ EPP-000: NorthStar Engineering Workflow Adoption & Repository Operational
 ---
 
 **Notebook Established:** July 12, 2026  
-**Current Session:** EPP-000  
+**Current Session:** ES-001  
 **Status:** Active
