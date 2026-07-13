@@ -8,7 +8,13 @@
 
 This is an **engineering knowledge repository**, not a software development project.
 
-The openTDC repository exists to document, preserve, and organize the complete engineering process involved in understanding, reverse engineering, validating, and modernizing the John Deere 316 Time Delay Controller (TDC).
+The openTDC repository documents the complete engineering process for developing a modern, open-source replacement for the John Deere 316 Time Delay Controller (TDC).
+
+The project will deliver:
+- Complete understanding of OEM controller operation through reverse engineering
+- 100% OEM-compatible replacement controller (OpenTDC Classic)
+- Enhanced replacement with diagnostics and monitoring (OpenTDC Enhanced)
+- Comprehensive engineering documentation and knowledge base
 
 Software, hardware, PCB design, and firmware are considered **engineering artifacts**—not the primary objective. This repository prioritizes engineering knowledge, methodology, and decision-making over code.
 
@@ -29,16 +35,26 @@ This project is guided by the following principles:
 
 ## Current Project Phase
 
-**Engineering Discovery**
+**Phase 1: Engineering Discovery**
 
-This phase focuses on:
-- Understanding the original TDC design
-- Reverse engineering hardware and firmware
-- Documenting OEM behavior through bench testing
-- Establishing baseline measurements and observations
-- Building a foundation of engineering knowledge
+This phase focuses on completely understanding OEM controller operation before any design work begins.
 
-**No firmware development, PCB redesign, or hardware redesign is currently authorized.**
+Current activities:
+- Reverse engineering OEM hardware
+- Characterizing inputs and outputs
+- Building functional truth table
+- Understanding timing behavior
+- Documenting OEM operation with evidence
+- Establishing engineering baseline
+
+**Engineering Constraints:**
+- No hardware architecture design
+- No firmware development
+- No PCB design
+- No enhancement implementation
+- Evidence-based conclusions only
+
+See `ROADMAP.md` for complete project phases and long-term vision.
 
 ---
 
@@ -48,6 +64,7 @@ This phase focuses on:
 openTDC/
 ├── README.md                          # This file
 ├── PROJECT_CHARTER.md                 # Project scope, objectives, and governance
+├── ROADMAP.md                         # Project phases and long-term vision
 ├── ENGINEERING_PRINCIPLES.md          # Detailed engineering philosophy and standards
 ├── ENGINEERING_NOTEBOOK.md            # Chronological engineering session log
 ├── ENGINEERING_DECISIONS.md           # Decision records with rationale

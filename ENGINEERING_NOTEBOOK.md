@@ -411,6 +411,127 @@ EPP-002: OEM Reference Documentation
 
 ---
 
+### Session EPP-001: Project Vision and Roadmap
+
+**Date:** 2026-07-13  
+**Time:** 05:27 - 05:31 (UTC-04:00)  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Phase:** Engineering Discovery
+
+#### Objective
+
+Establish the long-term vision for the openTDC project, expanding from reverse engineering to developing a modern replacement controller platform.
+
+#### Activities
+
+- Defined project vision: modern, open-source replacement TDC
+- Established three-phase project roadmap
+- Created engineering decisions for replacement controller philosophy
+- Documented engineering constraints for each phase
+- Identified future enhancement candidates
+- Created ROADMAP.md with complete phase details
+- Updated PROJECT_CHARTER.md to reflect expanded vision
+- Updated README.md with project deliverables
+
+#### Observations
+
+**Project Vision Expansion:**
+- Project now encompasses complete replacement controller development
+- Three distinct phases: Discovery, Classic, Enhanced
+- OEM compatibility remains primary objective
+- Modular platform architecture for future enhancements
+
+**Engineering Philosophy:**
+- Discovery must complete before design begins
+- OEM behavior preserved before enhancements introduced
+- Platform approach enables incremental enhancement
+- Clear phase boundaries reduce risk
+
+**Enhancement Candidates Identified:**
+- Charging voltage monitoring
+- Digital hour meter
+- Diagnostic LEDs
+- Service diagnostics mode
+- Event logging and fault history
+- Bluetooth/Wi-Fi connectivity (future evaluation)
+- Mobile/web dashboard (future evaluation)
+- Modular I/O expansion
+
+#### Data Collected
+
+**Documentation Created:**
+- `ROADMAP.md` - Complete three-phase project roadmap
+- Engineering Decisions: ED-009, ED-010, ED-011
+- Methodology Observation: MO-006
+
+**Documentation Updated:**
+- `README.md` - Project vision and deliverables
+- `PROJECT_CHARTER.md` - Version 2.0 with three-phase scope
+- `ENGINEERING_DECISIONS.md` - Three new decisions, count: 8 → 11
+- `METHODOLOGY_OBSERVATIONS.md` - MO-006 added, count: 5 → 6
+
+#### Decisions Made
+
+- **ED-009:** Replacement Controller Philosophy  
+  Decision: OEM compatibility remains primary objective; preserve OEM behavior before enhancements
+
+- **ED-010:** Reverse Engineering Before Design  
+  Decision: No design work until Engineering Discovery establishes complete OEM understanding
+
+- **ED-011:** Platform Architecture  
+  Decision: Modular platform capable of future enhancements without core redesign
+
+#### Methodology Observations
+
+- **MO-006:** Separating Engineering Discovery from Innovation  
+  Observation: Strict separation between discovery and innovation phases significantly reduces engineering risk and improves quality
+
+#### Open Questions
+
+**Phase 1 Completion:**
+- What constitutes "complete understanding" of OEM operation?
+- How will engineering team consensus be achieved?
+- What format for Engineering Discovery report?
+
+**Future Phases:**
+- Which enhancements should be prioritized?
+- What expansion architecture best supports modular enhancements?
+- How to maintain OEM compatibility while adding features?
+
+#### Follow-Up Required
+
+- [ ] Continue Engineering Discovery activities
+- [ ] Define Engineering Discovery completion criteria in detail
+- [ ] Establish enhancement prioritization framework
+- [ ] Plan Phase 1 → Phase 2 transition process
+
+#### Engineering Confidence
+
+**Project Vision Clarity:** ★★★★★
+
+- Clear three-phase roadmap established
+- Engineering philosophy well-defined
+- Phase boundaries explicit
+- Enhancement candidates identified
+- Risk mitigation strategies documented
+
+#### Next Engineering Objective
+
+Continue Engineering Discovery Phase 1 activities:
+- Battery installation and verification
+- Charging system characterization
+- Neutral switch characterization
+- Safety interlock characterization
+- TDC input/output mapping
+
+**Engineering Discovery remains current phase. No design work authorized.**
+
+#### EPP Reference
+
+EPP-001: Project Vision and Roadmap
+
+---
+
 ## Future Sessions
 
 *Subsequent engineering sessions will be documented below in chronological order.*
@@ -428,5 +549,5 @@ EPP-002: OEM Reference Documentation
 ---
 
 **Notebook Established:** July 12, 2026  
-**Current Session:** EPP-002  
+**Current Session:** EPP-001  
 **Status:** Active

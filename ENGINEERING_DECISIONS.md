@@ -704,6 +704,244 @@ This establishes an immutable baseline of the hardware in its original assembled
 
 ---
 
+### Decision 009: Replacement Controller Philosophy
+
+**Date:** 2026-07-13  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Session:** EPP-001  
+**Status:** Accepted  
+**Phase:** Engineering Discovery
+
+#### Context
+
+The openTDC project vision has expanded from reverse engineering an OEM controller to developing a modern replacement TDC. A fundamental engineering philosophy was needed to guide the replacement controller design approach and ensure OEM compatibility remains the primary objective.
+
+#### Decision
+
+**The replacement controller shall preserve OEM operating behavior before introducing enhancements. OEM compatibility remains the primary engineering objective.**
+
+This establishes that:
+- OEM functionality is the baseline
+- Enhancements are secondary to compatibility
+- Replacement controller must be a drop-in replacement
+- Original tractor operation must be preserved
+
+#### Rationale
+
+- **Preserve Original Functionality:** Tractor owners expect OEM behavior
+- **Minimize Risk:** Compatibility-first approach reduces deployment risk
+- **Enable Validation:** OEM behavior provides clear validation criteria
+- **Support Incremental Enhancement:** Baseline compatibility enables safe feature additions
+- **Maintain Trust:** Users trust replacement that works like original
+- **Simplify Testing:** OEM behavior is well-understood test baseline
+
+#### Alternatives Considered
+
+- **Enhancement-first approach:** Prioritize new features over OEM compatibility  
+  *Why not chosen:* Increases risk, complicates validation, may break existing tractor operation
+
+- **Complete redesign:** Build new controller without OEM compatibility constraint  
+  *Why not chosen:* Requires extensive tractor modifications, loses drop-in replacement benefit, increases adoption barrier
+
+#### Evidence
+
+- Project vision discussion (EPP-001)
+- Engineering team agreement on compatibility-first philosophy
+- Recognition that OEM behavior is well-understood baseline
+
+#### Consequences
+
+- **Positive:**
+  - Clear design priority (compatibility first)
+  - Reduced deployment risk
+  - Drop-in replacement capability
+  - Incremental enhancement path
+  - Clear validation criteria
+  - User confidence in replacement
+
+- **Negative:**
+  - May constrain some enhancement opportunities
+  - Requires complete OEM understanding first
+  - Enhancement implementation delayed until compatibility proven
+
+- **Risks:**
+  - OEM behavior may have undocumented quirks (mitigated by thorough reverse engineering)
+  - Enhancement desires may conflict with compatibility (mitigated by compatibility-first priority)
+
+#### Related Decisions
+
+- Decision 010: Reverse Engineering Before Design
+- Decision 011: Platform Architecture
+- Decision 002: Project Phase Structure (Engineering Discovery)
+
+#### References
+
+- EPP-001: Project Vision and Roadmap
+- ROADMAP.md - Project phases
+- ENGINEERING_NOTEBOOK.md - Session EPP-001
+
+---
+
+### Decision 010: Reverse Engineering Before Design
+
+**Date:** 2026-07-13  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Session:** EPP-001  
+**Status:** Accepted  
+**Phase:** Engineering Discovery
+
+#### Context
+
+With the project vision expanded to include a replacement controller, clear boundaries were needed to prevent premature design work from interfering with reverse engineering activities. Engineering discipline requires complete understanding before design begins.
+
+#### Decision
+
+**No hardware architecture, firmware architecture, PCB design, or feature implementation shall begin until Engineering Discovery has established a complete understanding of OEM functionality.**
+
+This prohibits:
+- Hardware architecture design
+- Firmware architecture design
+- PCB layout or design
+- Feature implementation
+- Component selection for replacement
+- Any design work based on incomplete understanding
+
+#### Rationale
+
+- **Prevent Assumption-Based Design:** Design based on incomplete understanding leads to errors
+- **Ensure Complete Understanding:** All OEM behavior must be characterized first
+- **Reduce Rework:** Premature design requires costly redesign when understanding improves
+- **Maintain Engineering Discipline:** Discovery and design are separate phases
+- **Preserve Evidence Quality:** Design thinking biases observation and evidence collection
+- **Enable Informed Decisions:** Complete understanding enables better design choices
+
+#### Alternatives Considered
+
+- **Parallel discovery and design:** Begin design while reverse engineering continues  
+  *Why not chosen:* Design assumptions bias observation, incomplete understanding causes design errors, increases rework
+
+- **Iterative approach:** Design based on partial understanding, refine as learning continues  
+  *Why not chosen:* Multiple design iterations costly, assumptions become embedded, hard to distinguish fact from assumption
+
+#### Evidence
+
+- Methodology Observation 005: Evidence before interpretation
+- Engineering team agreement on phase separation
+- Recognition that design thinking biases reverse engineering
+
+#### Consequences
+
+- **Positive:**
+  - Clear phase boundary
+  - Prevents premature design work
+  - Ensures complete OEM understanding
+  - Reduces design rework
+  - Maintains evidence quality
+  - Enables informed design decisions
+
+- **Negative:**
+  - Delays design phase start
+  - May frustrate desire to "start building"
+  - Requires patience and discipline
+
+- **Risks:**
+  - Team may be tempted to start design early (mitigated by explicit decision and engineering discipline)
+  - "Complete understanding" may be ambiguous (mitigated by clear Engineering Discovery completion criteria)
+
+#### Related Decisions
+
+- Decision 009: Replacement Controller Philosophy
+- Decision 011: Platform Architecture
+- Decision 002: Project Phase Structure
+- Methodology Observation 005: Evidence Before Interpretation
+
+#### References
+
+- EPP-001: Project Vision and Roadmap
+- ROADMAP.md - Project phases
+- ENGINEERING_NOTEBOOK.md - Session EPP-001
+
+---
+
+### Decision 011: Platform Architecture
+
+**Date:** 2026-07-13  
+**Engineer:** Rick Daniell (Lead Systems Engineer)  
+**Session:** EPP-001  
+**Status:** Accepted  
+**Phase:** Engineering Discovery
+
+#### Context
+
+The long-term openTDC vision includes multiple enhancement opportunities. An architectural decision was needed to determine whether the replacement controller should be designed as a fixed-function device or as an expandable platform.
+
+#### Decision
+
+**The replacement controller shall be designed as a modular engineering platform capable of supporting future enhancements without redesigning the core control architecture. Future capabilities should be accommodated through expansion rather than replacement.**
+
+This establishes:
+- Modular architecture approach
+- Core control functions separated from enhancements
+- Expansion capability built into initial design
+- Future-proof architecture
+
+#### Rationale
+
+- **Avoid Redesign:** Platform approach prevents need to redesign for each enhancement
+- **Enable Incremental Enhancement:** Features can be added without core changes
+- **Reduce Long-Term Cost:** Single platform supports multiple configurations
+- **Support Experimentation:** Modular design enables feature testing
+- **Preserve Investment:** Core platform remains stable as enhancements evolve
+- **Accommodate Unknown Future Needs:** Expansion capability supports unforeseen requirements
+
+#### Alternatives Considered
+
+- **Fixed-function design:** Build replacement with specific feature set, redesign for changes  
+  *Why not chosen:* Each enhancement requires new hardware, high long-term cost, limits experimentation
+
+- **Monolithic enhanced design:** Build all enhancements into single non-modular controller  
+  *Why not chosen:* Increases initial complexity, all-or-nothing deployment, difficult to test incrementally
+
+#### Evidence
+
+- Future enhancement candidates identified (EPP-001)
+- Recognition that enhancement needs will evolve
+- Engineering team preference for modular approach
+
+#### Consequences
+
+- **Positive:**
+  - Future-proof architecture
+  - Incremental enhancement capability
+  - Reduced long-term redesign cost
+  - Experimentation support
+  - Multiple configuration options
+  - Stable core platform
+
+- **Negative:**
+  - Increased initial design complexity
+  - Requires architectural planning
+  - May add cost to base controller
+  - Expansion interfaces must be designed upfront
+
+- **Risks:**
+  - Over-engineering for features that may never be implemented (mitigated by focusing on core platform, not speculative features)
+  - Expansion architecture may not accommodate all future needs (acceptable - platform enables most enhancements)
+
+#### Related Decisions
+
+- Decision 009: Replacement Controller Philosophy
+- Decision 010: Reverse Engineering Before Design
+- Decision 002: Project Phase Structure
+
+#### References
+
+- EPP-001: Project Vision and Roadmap
+- ROADMAP.md - Future enhancement candidates
+- ENGINEERING_NOTEBOOK.md - Session EPP-001
+
+---
+
 ## Future Decisions
 
 *Subsequent engineering decisions will be documented below in chronological order.*
@@ -732,5 +970,5 @@ Reviews are documented as updates to the original decision record.
 ---
 
 **Decision Log Established:** July 12, 2026  
-**Current Decisions:** 8  
+**Current Decisions:** 11  
 **Status:** Active

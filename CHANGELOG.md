@@ -31,9 +31,54 @@ This project uses **phase-based versioning** rather than semantic versioning:
 
 ### Planned
 - Test equipment inventory documentation
-- Review OEM documentation for TDC-specific information
-- Extract connector pinout from schematics
-- Electrical characterization of OEM TDC connector pinout
+- Battery installation and verification
+- Charging system characterization
+- Neutral switch characterization
+- Safety interlock characterization
+- TDC input/output mapping
+
+---
+
+## [Discovery.EPP-001.0] - 2026-07-13
+
+### Added
+
+**Project Vision and Roadmap:**
+- `ROADMAP.md` - Complete three-phase project roadmap
+- Phase 1: Engineering Discovery (current)
+- Phase 2: OpenTDC Classic (100% OEM-compatible replacement)
+- Phase 3: OpenTDC Enhanced (diagnostics and monitoring)
+
+**Engineering Decisions:**
+- Decision 009: Replacement Controller Philosophy (OEM compatibility first)
+- Decision 010: Reverse Engineering Before Design (no design until discovery complete)
+- Decision 011: Platform Architecture (modular, expandable design)
+
+**Engineering Sessions:**
+- Session EPP-001: Project Vision and Roadmap
+
+**Methodology Observations:**
+- Observation 006: Separating Engineering Discovery from Innovation
+
+### Changed
+
+- `README.md` - Updated repository purpose with project deliverables and three-phase vision
+- `PROJECT_CHARTER.md` - Version 2.0: Expanded scope to three phases, updated objectives and success criteria
+- `ENGINEERING_NOTEBOOK.md` - Added Session EPP-001, updated current session
+- `ENGINEERING_DECISIONS.md` - Added ED-009, ED-010, ED-011, updated decision count to 11
+- `METHODOLOGY_OBSERVATIONS.md` - Added MO-006, updated observation count to 6
+
+### Deprecated
+- N/A
+
+### Removed
+- N/A
+
+### Fixed
+- N/A
+
+### Security
+- N/A
 
 ---
 
@@ -221,6 +266,7 @@ This project uses **phase-based versioning** rather than semantic versioning:
 | Discovery.EPP-000.0 | 2026-07-12 | Engineering Discovery | NorthStar Engineering Workflow adoption |
 | Discovery.ES-001.0 | 2026-07-12 | Engineering Discovery | OEM TDC baseline documentation |
 | Discovery.EPP-002.0 | 2026-07-12 | Engineering Discovery | OEM reference documentation collection |
+| Discovery.EPP-001.0 | 2026-07-13 | Engineering Discovery | Project vision and roadmap |
 
 ---
 
@@ -236,5 +282,5 @@ This project uses **phase-based versioning** rather than semantic versioning:
 ---
 
 **Changelog Established:** July 12, 2026  
-**Current Version:** Discovery.EPP-002.0  
+**Current Version:** Discovery.EPP-001.0  
 **Status:** Active

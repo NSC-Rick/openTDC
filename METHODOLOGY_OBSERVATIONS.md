@@ -522,6 +522,131 @@ Recommended evidence types:
 
 ---
 
+### Observation 006: Separating Engineering Discovery from Innovation
+
+**Date:** 2026-07-13  
+**Session:** EPP-001  
+**Category:** Process  
+**Impact:** High
+
+#### Context
+
+With the openTDC project vision expanding to include a modern replacement controller, the engineering team needed to establish clear boundaries between reverse engineering activities (discovery) and new design work (innovation). The relationship between these two activities significantly impacts project risk and engineering quality.
+
+#### Observation
+
+**Separating Engineering Discovery from Innovation significantly reduces engineering risk.**
+
+Key insights:
+- **Discovery should focus exclusively on understanding existing hardware**
+- **Innovation should only begin after engineering understanding has been achieved**
+- **Mixing discovery and innovation biases observation and increases design risk**
+
+This separation improves:
+- Engineering traceability
+- Documentation quality
+- Long-term design confidence
+- Evidence integrity
+- Decision quality
+
+#### Analysis
+
+Traditional engineering approaches often mix discovery and innovation:
+- Design ideas emerge during reverse engineering
+- Observations become influenced by design thinking
+- Evidence collection becomes selective (supporting design ideas)
+- Assumptions fill gaps in understanding
+- Design work begins before complete understanding achieved
+
+This creates significant problems:
+- **Biased Observation:** Design thinking influences what is observed and recorded
+- **Incomplete Understanding:** Gaps in knowledge filled with assumptions
+- **Design Rework:** Incomplete understanding leads to design errors requiring costly rework
+- **Lost Evidence:** Original behavior not fully documented before design begins
+- **Assumption Creep:** Difficult to distinguish fact from assumption in historical records
+- **Validation Difficulty:** Incomplete baseline makes validation ambiguous
+
+The discovery-first approach addresses these issues:
+- **Unbiased Observation:** No design agenda influences evidence collection
+- **Complete Understanding:** All gaps identified and documented as unknowns
+- **Informed Design:** Design decisions based on complete understanding
+- **Preserved Evidence:** Original behavior fully documented before design
+- **Clear Traceability:** Fact and interpretation clearly separated
+- **Validation Baseline:** Complete OEM understanding provides clear validation criteria
+
+This is particularly critical when:
+- Reverse engineering complex systems
+- Building replacement/compatible designs
+- Working with undocumented hardware
+- Long-term maintainability is important
+- Multiple people will work on the project
+
+#### Recommendation
+
+**Future engineering projects should maintain strict separation between discovery and innovation phases.**
+
+Best practices:
+1. **Complete Discovery First** - Finish reverse engineering before starting design
+2. **Explicit Phase Boundaries** - Clear criteria for phase transitions
+3. **Prevent Premature Design** - Formal decision prohibiting design during discovery
+4. **Document Unknowns** - Unknown is acceptable during discovery
+5. **Evidence-Based Completion** - Phase transition requires documented evidence of complete understanding
+
+**For this project:**
+- Engineering Discovery (Phase 1) must complete before OpenTDC Classic (Phase 2) begins
+- Decision 010 formally prohibits design work during discovery
+- Clear completion criteria established for Phase 1
+- Roadmap documents phase boundaries
+- Engineering discipline maintained through explicit decisions
+
+**For future projects:**
+- Adopt discovery-first methodology as standard practice
+- Create phase transition checklists
+- Establish completion criteria templates
+- Train team members on discovery/innovation separation
+- Document phase boundaries in project planning
+
+#### Benefits Observed
+
+**Risk Reduction:**
+- Prevents assumption-based design
+- Reduces design rework
+- Improves validation confidence
+- Maintains evidence integrity
+
+**Quality Improvement:**
+- Better documentation
+- Clearer traceability
+- More informed design decisions
+- Higher long-term confidence
+
+**Process Improvement:**
+- Clear phase boundaries
+- Explicit completion criteria
+- Better project planning
+- Improved team coordination
+
+#### Action Taken
+
+- Decision 010: Reverse Engineering Before Design (formal prohibition)
+- Decision 009: Replacement Controller Philosophy (OEM compatibility first)
+- Decision 011: Platform Architecture (modular design approach)
+- ROADMAP.md created with clear phase boundaries
+- Phase 1 completion criteria established
+- Engineering constraints documented
+
+#### Related Items
+
+- Decision 010: Reverse Engineering Before Design
+- Decision 009: Replacement Controller Philosophy
+- Decision 011: Platform Architecture
+- Decision 002: Project Phase Structure
+- Observation 005: Engineering Evidence Should Be Captured Before Interpretation
+- ROADMAP.md - Project phases and boundaries
+- Session EPP-001: Project Vision and Roadmap
+
+---
+
 ## Future Observations
 
 *Subsequent methodology observations will be documented below in chronological order.*
@@ -565,9 +690,10 @@ Successful observations should be:
 | 003 | AI assistance with engineer oversight | Adopted | 2026-07-12 |
 | 004 | NorthStar Engineering Workflow for future projects | Adopted | 2026-07-12 |
 | 005 | Evidence-first methodology for all sessions | Adopted | 2026-07-12 |
+| 006 | Separate discovery from innovation phases | Adopted | 2026-07-13 |
 
 ---
 
 **Methodology Observations Established:** July 12, 2026  
-**Current Observations:** 5  
+**Current Observations:** 6  
 **Status:** Active
